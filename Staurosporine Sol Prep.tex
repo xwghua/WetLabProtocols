@@ -1,0 +1,136 @@
+\documentclass[10pt,letterpaper]{protocol}
+
+\usepackage[letterpaper]{geometry}
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{ulem}
+
+% Change the bullets for itemize and rating marker
+% for \risk if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faSpinner}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Staurosporine Solution Preparation}
+\tagline{Dr. Shu Jia lab's basic guide on Staurosporine (STS) solution preparation}
+\made{Jun 11, 2022}
+\logo{6.5cm}{"GeorgiaTech_RGB"}
+
+
+\docinfo{%
+  % can add more \addedtopeople
+  \madeby{Xuanwen Hua}{x.hua@gatech.edu}{Jun 11, 2022}
+  %\addedto{John Smith}{abv1@uni.ac.uk}{October 3, 2017}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makeheader
+\end{fullwidth}
+
+% ================================================
+%% Protocol cover sheet (warnings, notes)
+\needright{Warnings}{
+    %\warningsigns{\faFire}{Explosion Risk}{This protocol may spontaneously explode.}
+    \warningsigns{\faExclamationTriangle}{Human toxic}{This protocol may induce cell apoptosis.}
+    \medskip
+}
+
+\needright{Dangers}{
+    \risk{Chemicals}{5}
+    \risk{Physical}{1}
+    \risk{Environmental}{4}
+    
+\divider
+}
+
+% ================================================
+%% Protocol cover sheet (overview)
+\need[]{Overview}
+Staurosporine is a natural product derived alkaloid which is isolated from Streptomyces staurospores cultures.  This protein kinase inhibitor belongs to a family of kinase inhibitors containing an indole carbozol chromophore (Reviewed in Hidaka and Kobayashi 1).  Staurosporine is a potent inhibitor of a number of kinases including: Protein kinase C (PKC), cAMP dependent protein kinase- protein kinase A (PKA), tyrosine protein kinase, phosphorylase kinase, and Ca$^2$+/calmodulan-dependent protein kinase (1-6).  The ATP binding site on these kinase enzymes appears to be targeted by these Streptomyces derived inhibitors (1).  Experiments using [$^3$H]- staurosporine inhibition of purified PKC, PKA, tyrosine protein kinase and Ca$^2$+/calmodulan-dependent protein kinase enzymes revealed dissociation constants (K$_D$ ) ranging from 2-10 nM (2, 4).   Human promyelocytic leukemia (HL-60) cells were found to be sensitive to apoptosis induction from a 2 hour exposure to staurosporine concentrations as low as 0.1 µM (7).  
+
+\divider
+
+Inhibition of these intracellular kinases by staurosporine leads to the induction of apoptosis as exhibited by the classic chromatin condensation leading to the formation of micronuclear bodies and reduced cell volumes. DNA is subsequently cleaved into oligonucleosomal fragments (laddering) as evidenced by agarose gel analysis (7, 8). Staurosporine was determined to be an effective apoptosis inducing agent in virtually all cell lines that were exposed to this kinase inhibiting agent (7, 8).
+
+\clearpage
+
+% ================================================
+%% Protocol Materials
+\needright{Equipment}{
+%    \itemtag{Tool 1}
+    \itemtag{-20$^{\circ}$C freezer}
+}
+
+\needright{Consumables}{
+    \itemtag{\textit{(1)} Pipets}
+    \itemtag{\textit{(2)} Centrifugetubes}
+}
+
+\needright{Chemicals}{
+    \itemtag{Staurosporine}
+    \itemtag{DMSO}
+}
+
+\needright{Protective Gear}{
+%    \itemtag{Gear 1} 
+    \itemtag{Gloves}
+ }
+    
+\needright{References}{
+    \begin{enumerate}
+        \item (https://www.asone-int.com/wp-content/uploads/2017/05/6212$\_$\\Datasheet.pdf) Immunochemistry Product Data Sheet
+        
+    \end{enumerate}
+}
+
+% ================================================
+%% Protocol instructions and materials
+\need[]{Protocol}
+
+\step{1}{Dissolve staurosporine powder in DMSO.}{60}
+Dissolve staurosporine powder in DMSO. in tissue culture grade DMSO to obtain a 1 mM staurosporine concentration.
+\begin{enumerate}[label=(\alph*)]
+	\item Example calculation: \\
+	Staurosporine MW = 466.5 \\
+	1 mM Staurosporine = 1 x 466.5 µg/mL or 0.4665 mg/mL
+	\item To reconstitute a 1 mg vial of staurosporine:  \\
+	1 mg/(0.4665mg/mL)  =  2.14 mL DMSO reconstitution volume to obtain a 1 mM staurosporine stock solution.
+\end{enumerate}
+
+\divider
+
+\step{2}{Stock staurosporine-DMSO solution.}{10}
+\begin{enumerate}[label=(\alph*)]
+	\item Prepare 50 – 100 uL aliquots of the DMSO solubilized staurosporine stock solution.
+	\item Store them frozen at < -20º C.
+	\item A frozen vial of staurosporine may only be rethawed 2X before it must be discarded.\\
+	\uline{Vials which have been thawed 1X should be marked to indicate this so that they go through only 1 more freeze-thaw before being discarded.}
+\end{enumerate}
+
+\divider
+
+\step{3}{Spike cell cultures at staurosporine.}{60\textasciitilde 360}
+\begin{enumerate}[label=(\alph*)]
+	\item Spike cell cultures at a staurosporine concentration of 1 µM in the cell culture media.\\
+	This equates to a 1 µL spike of the 1 mM staurosporine stock per mL of the cell culture suspension.  This concentration works well for inducing many cell lines including HL-60 and Jurkat cells when using a 4-5 hour 37$^{\circ}$C incubation period.\\
+	Typical cell suspension concentrations that have been used for this staurosporine induction protocol range from 1 x 10$^5$ – 1 x 10$^6$ cells/mL. 
+\end{enumerate}
+
+\divider
+
+\step{4}{Perform time course studies.}{--}
+\begin{enumerate}[label=(\alph*)]
+	\item Perform time course studies on your particular cell line to ascertain the optimal staurosporine concentration and exposure time required to achieve good apoptosis induction levels in your experimental system.
+\end{enumerate}
+
+\divider
+
+\step{5}{Proceed with your experimental apoptosis induction model system.}{--}
+
+\end{document}
